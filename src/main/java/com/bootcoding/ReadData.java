@@ -10,6 +10,9 @@ public class ReadData {
         try{
             Document document= Jsoup.connect(url).get();
             for(Element row:document.select("article > p")){
+//                if(row.select("strong").text().equals("")){
+//                    System.out.println(row.select("strong"));
+//                }
                 System.out.println(row);
             }
         }
